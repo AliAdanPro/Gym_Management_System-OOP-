@@ -96,7 +96,7 @@ This will view the equipment details from file.
 This will search a specific record from the equipment file.
 ### updateequip(): void
 This can update a specific value from the equipment file.
-### deleteequip): void
+### deleteequip(): void
 This can delete a equipment record from file.
 ### getcountgym(): int
 This gets the count of the gym records present in the txt file.
