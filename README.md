@@ -1,4 +1,5 @@
 # Gym_Management_System-OOP-
+This project implements a Gym Management System using object-oriented programming principles in C++. The system includes classes for managing gym facilities, equipment, members, trainers.
 ## UML Diagram
 ![Picture1](https://github.com/AliAdanPro/Gym_Management_System-OOP-/assets/142499778/6676802e-7d01-431f-b205-bd661642ec00)
 ## Explanation
@@ -7,36 +8,41 @@
 + The plus shows public functions.
 + The strike through shows pure virtual functions.
 + The negative shows private data members.
-## Relations
-In the UML, there is application of Composition, inheritance in UML and also in the implementation of code.
-+ Inheritance of Member and Trainer from Person.
-+ Composition of Invoice with Member
-+ Composition of Address with Person
-+ Composition of Address with Gym
-+ Composition of Equipment with Gym
-## Other Important Details
-+ Person class has pure virtual functions which makes it abstract and they have been overridden in the child classes which makes concept of dynamic binding (Polymorphism) applicable.
-+ File and exception handling has also been used to ensure that if file is not opened or some error occurs, the program ends due to error and doesnt cause any problems.
+## Features
+
+- **File Handling**: Implements file I/O for data storage and retrieval.
+- **Exception Handling**: Ensures robust error handling during file operations.
+- **Polymorphism**: Utilizes polymorphism (Dynamic Binding) through abstract base classes and virtual functions.
+- **Composition and Inheritance**: Demonstrates object-oriented design principles.
 ## Classes
 ### Gym
-This class is the overall main class of the whole system.
-### Equipment
-This class contains the details of various equipments in
-the whole gym.
-### Address
-This class tells the address information of the gym.
-### Person
-This class is the base class and two child classes are
-inherited from it.
-### Trainer
-This class is the child class of Person and has details of
-Trainer in it.
-### Member
-This is the child class of the person and has details of
-the gym members in it.
-### Invoice
-This class has all the billing information of the gym
-members.
+- Manages overall gym operations.
+- Tracks gym details such as name, contact number, and equipment.
+
+### Equipment (Composition with Gym)
+- Stores information about gym equipment.
+- Tracks equipment name, model, and quantity.
+
+### Address (Composition with Gym and Person)
+- Manages address information for gyms and personnel.
+- Includes street number, sector, house number, and city.
+
+### Person (Abstract Base Class)
+- Base class for Trainers and Members.
+- Includes common attributes like ID, name, contact number, and address.
+- Implements virtual functions for polymorphism.
+
+### Trainer (Inherits from Person)
+- Represents gym trainers.
+- Includes specialization details.
+
+### Member (Inherits from Person)
+- Represents gym members.
+- Tracks membership details and billing.
+
+### Invoice (Composition with Member)
+- Manages billing details for gym members.
+- Includes trainer charges, gym fees, and total amount.
 ## Attributes
 ### Gym
 + Name
@@ -72,7 +78,7 @@ members.
 + trainer_charges
 + gym_fee
 + total_amount
-## Methods
+## Usage
 ## Gym
 ### Gym():
 This is the constructor of the Gym Class
